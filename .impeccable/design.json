@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "Source": "impeccable-style-extraction",
+  "Name": "MoneyMate Kakeibo Stationery Ledger",
+  "Described": "Cute rounded Thai stationery ledger (Mitr, Mali, Anuphan, JetBrains Mono) in a strict 4-color palette of Sky Blue (#0284C7 / #EEF6FF), Deep Royal Navy (#1E3A8A / #0F2942), Pure Crisp White (#FFFFFF), and Vibrant Crimson Red (#DC2626 / #FFE4E6).",
+  "Tokens": {
+    "colors": {
+      "bg-page": "#EEF6FF",
+      "surface": "#FFFFFF",
+      "surface-elevated": "#F4F9FF",
+      "text-primary": "#0F2942",
+      "text-secondary": "#1E3A8A",
+      "text-muted": "#475569",
+      "navy-primary": "#1E3A8A",
+      "sky-primary": "#0284C7",
+      "crimson-primary": "#DC2626",
+      "crimson-soft": "#FFE4E6",
+      "border-subtle": "#BFDBFE",
+      "border-strong": "#93C5FD"
+    },
+    "typography": {
+      "font-display": "Mitr, Anuphan, sans-serif",
+      "font-cute": "Mali, Mitr, sans-serif",
+      "font-sans": "Anuphan, sans-serif",
+      "font-mono": "JetBrains Mono, monospace"
+    },
+    "radii": {
+      "sm": "6px",
+      "inner": "12px",
+      "outer": "20px",
+      "full": "9999px"
+    }
+  },
+  "VisualDirection": {
+    "domainExemplars": [
+      "Japanese Kakeibo household ledger notebooks",
+      "Freee.co.jp friendly accounting stationery UI"
+    ],
+    "mendelsohn": "High-craft light mode stationery ledger with 2px sky-blue borders, pure white paper sheets on a sky-blue desk mat, rounded Mitr/Mali headings, and double crimson-red accounting summary rules.",
+    "antiSlopGuardrails": [
+      "No eyebrow kickers above headings",
+      "No single-word colored spans inside headlines",
+      "No colored left-border side-tabs on cards",
+      "No emoji standing in for SVG icons",
+      "No middle-dot metadata strings",
+      "No nested card-in-card SaaS bloat"
+    ]
+  }
+}

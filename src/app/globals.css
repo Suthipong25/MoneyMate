@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Anuphan', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Mitr', 'Anuphan', sans-serif;
+  --font-cute: 'Mali', 'Anuphan', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Crisp Editorial Ledger Palette — Paper White, Ledger Wash, Deep Navy Ink, Credit Blue, Debit Red */
+  --color-bg-primary: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-muted: #F1F5F9;
+
+  /* Deep Accounting Navy */
+  --color-brand-primary: #1E3A8A;
+  --color-brand-hover: #172554;
+  --color-brand-soft: #EFF6FF;
+
+  /* Credit / Income Blue */
+  --color-sky: #0284C7;
+  --color-sky-soft: #E0F2FE;
+  --color-income: #0284C7;
+  --color-income-soft: #E0F2FE;
+
+  /* Debit / Action Red */
+  --color-expense: #DC2626;
+  --color-expense-soft: #FEF2F2;
+  --color-warning: #D97706;
+  --color-warning-soft: #FEF3C7;
+
+  /* Authoritative Ink Hierarchy */
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748B;
+
+  /* Architectural Hairline Rules */
+  --color-border: #DCE5F0;
+  --color-border-strong: #B8C9DF;
+  --color-focus-ring: #1E3A8A;
+
+  /* Disciplined Radii */
+  --radius-outer: 12px;
+  --radius-inner: 8px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+::selection {
+  background-color: #DBEAFE;
+  color: #0F172A;
+}
+
+html {
+  scrollbar-color: #94A3B8 #F8FAFC;
+  scrollbar-width: thin;
+}
+
+html,
+body {
+  overflow-x: clip;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  caret-color: var(--color-brand-primary);
+  text-underline-offset: 4px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p,
+li,
+dd {
+  text-wrap: pretty;
+}
+
+.font-cute {
+  font-family: var(--font-cute);
+}
+
+.tabular-nums,
+[data-financial-num] {
+  font-variant-numeric: tabular-nums;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Single Orchestrated Page-Load Entrance (frontend-design principle: one clean reveal, no scattered hover gimmicks) */
+@keyframes mm-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mm-hero-enter {
+  animation: mm-enter 420ms var(--ease-out-expo) both;
+}
+
+.mm-interactive {
+  transition:
+    background-color 150ms var(--ease-out-quart),
+    border-color 150ms var(--ease-out-quart),
+    color 150ms var(--ease-out-quart),
+    transform 150ms var(--ease-out-quart),
+    box-shadow 150ms var(--ease-out-quart);
+}
+
+@media (pointer: coarse) {
+  button,
+  a[role='button'],
+  input[type='button'],
+  input[type='submit'] {
+    min-height: 44px;
+  }
+}
+
+/* Clean Architectural Frame (used across portal and workbench) */
+.mm-card-outer {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-outer);
+}
+
+.mm-card-inner {
+  border-radius: var(--radius-inner);
+}
+
+/* Accounting Double Bottom Rule (Used under Total/Net figures on real financial statements) */
+.mm-double-rule-red {
+  border-bottom: 3px double var(--color-expense);
+}
+
+.mm-double-rule-navy {
+  border-bottom: 3px double var(--color-brand-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
